@@ -40,7 +40,7 @@ jobs:
       - name: Definir lenguaje
         run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python hola_lenguaje.py
+        run: python main.py
   hola-mundo:
     if: ${{ github.event_name != 'workflow_dispatch' }}
     runs-on: ubuntu-latest
@@ -50,4 +50,4 @@ jobs:
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python hola_mundo.py
+        run: python main.py
